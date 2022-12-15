@@ -39,6 +39,12 @@ void print_to_98(int n)
 				{
 					_putchar(abs(x) + '0');
 				}
+				else if (x <= -100 && x > -1000)
+				{
+					_putchar((abs(x) / 100) + '0');
+					_putchar((abs(x) % 100) + '0');
+					_putchar((abs(x) % 10) + '0');
+				}
 			}
 			if (x != 98)
 			{

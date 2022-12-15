@@ -42,7 +42,7 @@ void print_to_98(int n)
 				else if (x <= -100 && x > -1000)
 				{
 					_putchar((abs(x) / 100) + '0');
-					_putchar((abs(x) % 100) + '0');
+					_putchar(((abs(x) % 100) / 10) + '0');
 					_putchar((abs(x) % 10) + '0');
 				}
 			}

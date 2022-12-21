@@ -1,22 +1,17 @@
 #include "main.h"
 
 /**
- * print_rev - print string in rev
- * @s: string to print in rev
+ * print_rev - prints string in rev order
+ * @s: string to reverse
+ * Return: nothing
  */
+
 void print_rev(char *s)
 {
-	int x = 0;
+	int sl = strlen(s) - 1;
+	int x;
 
-	while (*s != '\0')
-	{
-		x++;
-		s++;
-	}
-	while (x > -1)
-	{
-		_putchar(*s--);
-		x--;
-	}
+	for (x = sl; x > -1; x--)
+		_putchar(s[x]);
 	_putchar('\n');
 }

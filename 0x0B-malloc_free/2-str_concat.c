@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 	int lenS1, lenS2, increment;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		return ("");
 	if (s1 != NULL)
 		lenS1 = strlen(s1);
 	else
@@ -25,6 +25,8 @@ char *str_concat(char *s1, char *s2)
 		lenS2 = 0;
 
 	newStr = malloc(sizeof(char) * (lenS1 + lenS2) + 1);
+	if (newStr == NULL)
+		return (NULL);
 	for (increment = 0; increment < lenS1; increment++)
 		newStr[increment] = s1[increment];
 	for (increment = 0; increment < lenS2; increment++)

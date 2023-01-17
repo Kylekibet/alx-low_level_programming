@@ -13,11 +13,16 @@ char *str_concat(char *s1, char *s2)
 	char *newStr;
 	int lenS1, lenS2, increment;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-
-	lenS1 = strlen(s1);
-	lenS2 = strlen(s2);
+	if (s1 != NULL)
+		lenS1 = strlen(s1);
+	else
+		lenS1 = 0;
+	if (s2 != NULL)
+		lenS2 = strlen(s2);
+	else
+		lenS2 = 0;
 
 	newStr = malloc(sizeof(char) * (lenS1 + lenS2) + 1);
 	for (increment = 0; increment < lenS1; increment++)

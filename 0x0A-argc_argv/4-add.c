@@ -8,22 +8,19 @@
  */
 int main(int argc, char **argv)
 {
-	int x, y = 0;
+	int x, sum = 0;
 
-	for (x = 1; x <= argc; x++)
+	for (x = 1; x < argc; x++)
 	{
-		if (argc == 100)
-		{
-			printf("0\n");
-		}
-		else if (atoi(argv[x]) >= 0)
-			y += atoi(argv[x]);
-		else
+		if(!isdigit(*argv[x]))
 		{
 			printf("Error\n");
 			return (1);
 		}
+		sum += atoi(argv[x]);
 	}
-	printf("%d\n", y);
+
+	printf("%d\n", sum);
+
 	return (0);
 }

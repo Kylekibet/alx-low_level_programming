@@ -2,6 +2,7 @@
 
 /**
  * print_name - pass name to a function modifier
+ * @name: name to modify
  * @f: function to modify name
  */
 

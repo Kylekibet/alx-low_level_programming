@@ -8,13 +8,12 @@
   * Return: 1 if successful and -1 if failed
   */
 
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index __attribute__((unused)))
 {
-	listint_t temp;
+	listint_t temp __attribute__((unused));
 
 	if (head == NULL)
-		return (NULL);
+		return (-1);
 
-	return (temp);
-}
+	return (1);
 }
